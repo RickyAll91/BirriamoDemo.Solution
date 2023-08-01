@@ -19,10 +19,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TipoOrdine>>> GetTipiOrdine()
         {
-          if (_context.TipiOrdine == null)
-          {
-              return NotFound();
-          }
+            if (_context.TipiOrdine == null)
+            {
+                return NotFound();
+            }
             return await _context.TipiOrdine.ToListAsync();
         }
 
@@ -30,10 +30,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TipoOrdine>> GetTipoOrdine(int id)
         {
-          if (_context.TipiOrdine == null)
-          {
-              return NotFound();
-          }
+            if (_context.TipiOrdine == null)
+            {
+                return NotFound();
+            }
             var tipoOrdine = await _context.TipiOrdine.FindAsync(id);
 
             if (tipoOrdine == null)
@@ -80,10 +80,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<TipoOrdine>> PostTipoOrdine(TipoOrdine tipoOrdine)
         {
-          if (_context.TipiOrdine == null)
-          {
-              return Problem("Entity set 'BirriamoDemoContext.TipiOrdine'  is null.");
-          }
+            if (_context.TipiOrdine == null)
+            {
+                return Problem("Entity set 'BirriamoDemoContext.TipiOrdine'  is null.");
+            }
             _context.TipiOrdine.Add(tipoOrdine);
             await _context.SaveChangesAsync();
 

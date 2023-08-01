@@ -19,10 +19,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Appuntamenti>>> GetAppuntamenti()
         {
-          if (_context.Appuntamenti == null)
-          {
-              return NotFound();
-          }
+            if (_context.Appuntamenti == null)
+            {
+                return NotFound();
+            }
             return await _context.Appuntamenti.ToListAsync();
         }
 
@@ -30,10 +30,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Appuntamenti>> GetAppuntamenti(int id)
         {
-          if (_context.Appuntamenti == null)
-          {
-              return NotFound();
-          }
+            if (_context.Appuntamenti == null)
+            {
+                return NotFound();
+            }
             var appuntamenti = await _context.Appuntamenti.FindAsync(id);
 
             if (appuntamenti == null)
@@ -80,10 +80,10 @@ namespace BirriamoDemoAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Appuntamenti>> PostAppuntamenti(Appuntamenti appuntamenti)
         {
-          if (_context.Appuntamenti == null)
-          {
-              return Problem("Entity set 'BirriamoDemoContext.Appuntamenti'  is null.");
-          }
+            if (_context.Appuntamenti == null)
+            {
+                return Problem("Entity set 'BirriamoDemoContext.Appuntamenti'  is null.");
+            }
             _context.Appuntamenti.Add(appuntamenti);
             await _context.SaveChangesAsync();
 

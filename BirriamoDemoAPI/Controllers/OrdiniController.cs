@@ -23,7 +23,9 @@ namespace BirriamoDemoAPI.Controllers
             {
                 return NotFound();
             }
-            return await _context.Ordini.ToListAsync();
+            return await _context.Ordini
+                .Include(i => i.DettaglioOrdini)
+                .ToListAsync();
         }
 
         // GET: api/Ordini/5
@@ -82,7 +84,7 @@ namespace BirriamoDemoAPI.Controllers
         {
             if (_context.Ordini == null)
             {
-                return Problem("Entity set 'BirriamoDemoContext.Ordini'  is null.");
+                return Problem("Entity set 'BirriamoDemoContext.Ordini' is null.");
             }
             _context.Ordini.Add(ordine);
             await _context.SaveChangesAsync();
