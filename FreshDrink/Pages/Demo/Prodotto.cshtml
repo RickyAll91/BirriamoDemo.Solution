@@ -1,0 +1,36 @@
+﻿@page
+@model FreshDrink.Pages.Demo.ProdottoModel
+@{
+}
+
+<h1 id="text-title" class="text-center">Prodotti</h1>
+
+@*<div class="d-flex justify-content-center align-items-center mt-4">
+    <a class="btn btn-primary" href="/Demo/Ordine">+</a>
+</div>*@
+
+<div class="container-sm w-50">
+    <div id="table-container">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Nome Prodotto</th>
+                    <th>Prezzo</th>
+                    <th>Capacità</th>
+                    <th>Gradazione</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model.ListaProdotti)
+                {
+                    <tr>
+                        <td>@item.Descrizione</td>
+                        <td>@item.Prezzo</td>
+                        <td>@item.Capacità</td>
+                        <td>@item.Gradazione</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@page
+@model FreshDrink.Pages.Demo.GiacenzaModel
+@{
+}
+
+<h1 id="text-title" class="text-center">Giacenze</h1>
+
+<div class="container-sm w-50">
+    <div id="table-container">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Nome Prodotto</th>
+                    <th>Quantità</th>
+                    <th>Capacità</th>
+                    <th>Data Aggiornamento</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model.ListaGiacenza)
+                {
+                    <tr>
+                        <td>@item.IdProdottoNavigation.Descrizione</td>
+                        <td>@item.IdProdottoNavigation.Capacità cl</td>
+                        <td>@item.Quantità</td>
+                        <td>@item.DataAggiornamentoQuantità</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

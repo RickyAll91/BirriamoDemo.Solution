@@ -1,0 +1,32 @@
+﻿@page
+@model FreshDrink.Pages.Demo.AgenteModel
+@{
+}
+
+<h1 id="text-title" class="text-center">Dipendenti</h1>
+
+<div class="container-sm w-50">
+    <div id="table-container">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Matricola Agente</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Data di nascita</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model.ListaDipendenti)
+                {
+                    <tr>
+                        <td>@item.Matricola</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Cognome</td>
+                        <td>@item.DataDiNascita</td>                    
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

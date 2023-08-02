@@ -1,0 +1,156 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: url(../img/hero-beer.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.background-hidden {
+    background: none;
+}
+
+/* NAVBAR */
+
+#text-title {
+    color: #FBC201;
+}
+
+#logo-navbar {
+    height: 100px;
+    width: 100px;
+    margin: -10px 0;
+    margin-right: 850px;
+    border-radius: 20px;
+    box-shadow: 0.2rem 0.4rem 0.5rem #0009;
+    /*mix-blend-mode: multiply;*/
+}
+
+.link-name:hover {
+    color: mediumblue;
+}
+
+.bi:hover {
+    color: mediumblue;
+}
+
+/* LOGIN FORM */
+
+
+#login-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff8;
+    border: 2px solid #FBC201;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0.2rem 0.4rem 0.5rem #0009;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    background-color: #fff9;
+    border: 2px solid #FBC201;
+    border-radius: 3px;
+}
+
+#login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FBC201;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #FDCC53;
+}
+
+/* CARDS */
+
+.card-link {
+    position: relative;
+    display: inline-block;
+    width: 30rem;
+    text-decoration: none;
+    /*border: 2px solid #FBC201;*/
+    box-shadow: 0.2rem 0.4rem 0.5rem #0009;
+    border-radius: 15px;
+}
+
+.card-link img {
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.text-card {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 100;
+    font-weight: bold;
+    font-size: 35px;
+    transition: all 0.5s linear;
+}
+
+.text-card:hover {
+    transform: scale(1.3);
+}
+
+/* TABLES */
+
+#table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    backdrop-filter: blur(10px);
+}
+
+#table {
+    background-color: #fff5;
+    height: 400px;
+    width: 550px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 5px solid #FBC201;
+    box-shadow: 0.2rem 0.4rem 0.5rem #0009;
+    overflow: hidden;
+}
+
+th {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+tr, td {
+    background-color: #fffb;
+    border-collapse: collapse;
+    border-top: none;
+    padding: 1.5rem;
+    text-align: center;
+}

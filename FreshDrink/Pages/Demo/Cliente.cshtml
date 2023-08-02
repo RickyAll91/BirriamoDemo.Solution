@@ -1,0 +1,35 @@
+﻿@page
+@model FreshDrink.Pages.Demo.ClienteModel
+@{
+}
+
+<h1 id="text-title" class="text-center">Clienti</h1>
+
+<div class="container-sm w-50">
+    <div id="table-container">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Partita Iva</th>
+                    <th>Ragione Sociale</th>
+                    <th>Sede Giuridica</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model.ListaCliente)
+                {
+                    <tr>
+                        <td>@item.PartitaIva</td>
+                        <td>@item.RagioneSociale</td>
+                        <td>@item.IndirizzoSedeGiuridica</td>
+                        <td>@item.Email</td>
+                        <td>@item.RecapitoTelefonico</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -23,7 +23,7 @@ namespace BirriamoDemoAPI.Controllers
             {
                 return NotFound();
             }
-            return await _context.Giacenze.ToListAsync();
+            return await _context.Giacenze.Include(x => x.IdProdottoNavigation).ToListAsync();
         }
 
         // GET: api/Giacenzes/5
