@@ -23,7 +23,7 @@
                         <td>@item.IdProdottoNavigation.Descrizione</td>
                         <td>@item.IdProdottoNavigation.Capacità cl</td>
                         <td>@item.Quantità</td>
-                        <td>@item.DataAggiornamentoQuantità</td>
+                        <td>@item.DataAggiornamentoQuantità.GetValueOrDefault().Date.AddHours(7)</td>
                     </tr>
                 }
             </tbody>
